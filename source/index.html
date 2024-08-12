@@ -13,16 +13,22 @@
       <a class="header__logo-link" href="/">
         <picture>
           <source
+            width="170"
+            height="36"
             media="(min-width: 1440px)"
-            srcset="./images/icons/site-logo-desktop.svg"
+            srcset="./images/site-logo-desktop.svg"
           />
           <source
+            width="82"
+            height="36"
             media="(min-width: 768px)"
-            srcset="./images/icons/site-logo-tablet.svg"
+            srcset="./images/site-logo-tablet.svg"
           />
           <img
+            width="32"
+            height="36"
             class="header__logo"
-            src="./images/icons/site-logo-mobile.svg"
+            src="./images/site-logo-mobile.svg"
             alt="Логотип."
           />
         </picture>
@@ -71,10 +77,13 @@
         </ul>
       </nav>
     </header>
+
     <main class="main-page">
       <h1 class="visually-hidden">Интернет-магазин кофейных напитков</h1>
+
       <section class="main-page__section promo">
         <h2 class="visually-hidden">Новинки</h2>
+
         <div class="promo__slider product-swiper swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -217,6 +226,42 @@
             Предыдущий слайд
           </button>
         </div>
+      </section>
+
+      <section class="main-page__section advantages">
+        <h2 class="main-page__section-title">
+          Главные причины выбрать Drink2Go
+        </h2>
+
+        <dl class="advantages__list">
+          <div class="advantages__item">
+            <dt class="advantages__heading">Скорость</dt>
+            <dd class="advantages__description">
+              Готовый напиток всегда под рукой — просто открой банку
+            </dd>
+          </div>
+
+          <div class="advantages__item">
+            <dt class="advantages__heading">Удобство</dt>
+            <dd class="advantages__description">
+              Легко помещается и в карман, и в маленькую сумочку
+            </dd>
+          </div>
+
+          <div class="advantages__item">
+            <dt class="advantages__heading">Бодрость</dt>
+            <dd class="advantages__description">
+              Сбалансированная доза кофеина даст мощный заряд энергии
+            </dd>
+          </div>
+
+          <div class="advantages__item">
+            <dt class="advantages__heading">Экологичность</dt>
+            <dd class="advantages__description">
+              Вся упаковка сделана из перерабатываемых материалов
+            </dd>
+          </div>
+        </dl>
       </section>
     </main>
   </body>
