@@ -1,17 +1,223 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
   <head>
-    <meta charset="UTF-8">
-    <title>Название проекта</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="preload" href="#" type="font/woff2" as="font">
-    <link rel="stylesheet" href="styles/styles.css">
+    <meta charset="UTF-8" />
+    <title>Drink two go</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="preload" href="#" type="font/woff2" as="font" />
+    <link rel="stylesheet" href="styles/styles.css" />
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="header">Шапка</header>
-    <main>
-      <h1>Страница для старта</h1>
+    <header class="header">
+      <a class="header__logo-link" href="/">
+        <picture>
+          <source
+            media="(min-width: 1440px)"
+            srcset="./images/icons/site-logo-desktop.svg"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="./images/icons/site-logo-tablet.svg"
+          />
+          <img
+            class="header__logo"
+            src="./images/icons/site-logo-mobile.svg"
+            alt="Логотип."
+          />
+        </picture>
+        <p class="header__logo-description">
+          Интернет-магазин кофейных напитков
+        </p>
+      </a>
+
+      <nav class="header__nav">
+        <button class="header__nav-button">
+          <span class="visually-hidden">Открыть меню навигации</span>
+        </button>
+
+        <ul class="header__user-nav-list">
+          <li class="header__user-nav-item">
+            <a href="./account.html">
+              <span class="visually-hidden">Аккаунт</span>
+              <svg width="16" height="16" aria-hidden="true" focusable="false">
+                <use xlink:href="icons/stack.svg#user-icon"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="header__user-nav-item">
+            <a href="./basket.html">
+              <span class="visually-hidden">Корзина</span>
+              <svg width="16" height="16" aria-hidden="true" focusable="false">
+                <use xlink:href="icons/stack.svg#basket-icon"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="header__site-nav-list">
+          <li class="header__site-nav-item">
+            <a href="">Главная</a>
+          </li>
+          <li class="header__site-nav-item">
+            <a href="./catalog.html">Каталог</a>
+          </li>
+          <li class="header__site-nav-item">
+            <a href="./delivery.html">Доставка</a>
+          </li>
+          <li class="header__site-nav-item">
+            <a href="./about.html">О нас</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-page">
+      <h1 class="visually-hidden">Интернет-магазин кофейных напитков</h1>
+      <section class="main-page__section promo">
+        <h2 class="visually-hidden">Новинки</h2>
+        <div class="promo__slider product-swiper swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <article class="product-swiper__slide">
+                <header class="product-swiper__slide-header">
+                  <span class="product-swiper__icon-new-product">Новинка!</span>
+                  <a href="./product-card">
+                    <h3 class="product-swiper__title">Декаф Флэт Уайт</h3>
+                  </a>
+                  <p class="product-swiper__description">
+                    Свежесваренный кофе без кофеина из Эфиопии с натуральным
+                    фермерским молоком — то, что нужно для расслабления после
+                    тяжёлого рабочего дня
+                  </p>
+                </header>
+                <a class="product-swiper__link" href="./product-card">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="
+                        images/flat_white_img@1x.webp 1x,
+                        images/flat_white_img@2x.webp 2x
+                      "
+                    />
+                    <img
+                      class="product-swiper__image"
+                      src="./images/flat_white_img@1x.png"
+                      srcset="./images/flat_white_img@2x.png 2x"
+                      alt="Бежевая баночка кофе с всплеском молока на заднем фоне."
+                    />
+                  </picture>
+                </a>
+
+                <p class="product-swiper__buy-wrapper">
+                  <sapn class="product-swiper__old-price" del>295₽</sapn>
+                  <sapn class="product-swiper__price">225₽</sapn>
+                  <a
+                    class="product-swiper__button button"
+                    href="./product-card"
+                  >
+                    Заказать
+                  </a>
+                </p>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="product-swiper__slide">
+                <header class="product-swiper__slide-header">
+                  <span class="product-swiper__icon-new-product">Новинка!</span>
+                  <a class="product-swiper__link" href="./product-card">
+                    <h3 class="product-swiper__title">Лавандовый Латте</h3>
+                  </a>
+
+                  <p class="product-swiper__description">
+                    Невероятное сочетание перуанской высокогорной арабики с
+                    молоком ламы и лавандовым сиропом унесёт вас прямо на
+                    вершину Радужных гор
+                  </p>
+                </header>
+                <a class="product-swiper__link" href="./product-card">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="
+                        images/lavender_img@1x.webp 1x,
+                        images/lavender_img@2x.webp 2x
+                      "
+                    />
+                    <img
+                      class="product-swiper__image"
+                      src="./images/lavender_img@1x.png"
+                      srcset="./images/lavender_img@2x.png 2x"
+                      alt="Бежевая баночка кофе с всплеском молока на заднем фоне."
+                    />
+                  </picture>
+                </a>
+
+                <p class="product-swiper__buy-wrapper">
+                  <sapn class="product-swiper__old-price" del>285₽</sapn>
+                  <sapn class="product-swiper__price">265₽</sapn>
+                  <a
+                    class="product-swiper__button button"
+                    href="./product-card"
+                  >
+                    Заказать
+                  </a>
+                </p>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="product-swiper__slide">
+                <header class="product-swiper__slide-header">
+                  <span class="product-swiper__icon-new-product">Новинка!</span>
+                  <a class="product-swiper__link" href="./product-card">
+                    <h3 class="product-swiper__title">Тройной Эспрессо</h3>
+                  </a>
+
+                  <p class="product-swiper__description">
+                    Мощнее укола адреналина, чернее самой тёмной ночи, этот
+                    тройной эспрессо из Колумбии покажет вам, что такое
+                    настоящая бодрость
+                  </p>
+                </header>
+                <a class="product-swiper__link" href="./product-card">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="
+                        images/espresso_img@1x.webp 1x,
+                        images/espresso_img@2x.webp 2x
+                      "
+                    />
+                    <img
+                      class="product-swiper__image"
+                      src="./images/espresso_img@1x.png"
+                      srcset="./images/espresso_img@2x.png 2x"
+                      alt="Бежевая баночка кофе с всплеском молока на заднем фоне."
+                    />
+                  </picture>
+                </a>
+
+                <p class="product-swiper__buy-wrapper">
+                  <sapn class="product-swiper__old-price" del>395₽</sapn>
+                  <sapn class="product-swiper__price">375₽</sapn>
+                  <a
+                    class="product-swiper__button button"
+                    href="./product-card"
+                  >
+                    Заказать
+                  </a>
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <button class="arrow-button arrow-button">Следующий слайд</button>
+          <button class="arrow-button arrow-button--right">
+            Предыдущий слайд
+          </button>
+        </div>
+      </section>
     </main>
   </body>
 </html>
