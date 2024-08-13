@@ -1,2 +1,40 @@
 .header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.header__logo {
+  width: 32px;
+  height: 36px;
+
+  @media (min-width: $tablet-width) {
+    width: 82px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 170px;
+  }
+}
+
+.header__logo-description {
+  display: none;
+  margin-left: 20px;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+  }
+}
+
+.header__nav {
+  padding-left: 20px;
 }

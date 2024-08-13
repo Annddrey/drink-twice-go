@@ -9,7 +9,7 @@
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="header">
+    <header class="header wrapper">
       <a class="header__logo-link" href="/">
         <picture>
           <source
@@ -37,41 +37,45 @@
         </p>
       </a>
 
-      <nav class="header__nav">
-        <button class="header__nav-button">
+      <!--
+        удалить класс nav--closed и
+        добавить класс nav--opened, чтобы открыть меню (nav__user-nav-list)
+        -->
+      <nav class="header__nav nav--nojs nav nav--closed">
+        <button class="nav__nav-button" type="button">
           <span class="visually-hidden">Открыть меню навигации</span>
         </button>
 
-        <ul class="header__user-nav-list">
-          <li class="header__user-nav-item">
+        <ul class="nav__user-nav-list">
+          <li class="nav__user-nav-item">
             <a href="./account.html">
-              <span class="visually-hidden">Аккаунт</span>
               <svg width="16" height="16" aria-hidden="true" focusable="false">
                 <use xlink:href="icons/stack.svg#user-icon"></use>
               </svg>
+              <span class="nav__user-nav-text">Войти</span>
             </a>
           </li>
-          <li class="header__user-nav-item">
+          <li class="nav__user-nav-item">
             <a href="./basket.html">
-              <span class="visually-hidden">Корзина</span>
               <svg width="16" height="16" aria-hidden="true" focusable="false">
                 <use xlink:href="icons/stack.svg#basket-icon"></use>
               </svg>
+              <span class="nav__user-nav-text">Корзина</span>
             </a>
           </li>
         </ul>
 
-        <ul class="header__site-nav-list">
-          <li class="header__site-nav-item">
+        <ul class="nav__site-nav-list">
+          <li class="nav__site-nav-item">
             <a href="">Главная</a>
           </li>
-          <li class="header__site-nav-item">
+          <li class="nav__site-nav-item">
             <a href="./catalog.html">Каталог</a>
           </li>
-          <li class="header__site-nav-item">
+          <li class="nav__site-nav-item">
             <a href="./delivery.html">Доставка</a>
           </li>
-          <li class="header__site-nav-item">
+          <li class="nav__site-nav-item">
             <a href="./about.html">О нас</a>
           </li>
         </ul>
