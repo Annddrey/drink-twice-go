@@ -3,9 +3,6 @@
   background-color: #ffffff;
 }
 
-.page__main {
-}
-
 .page__section,
 .page__header,
 .page__footer {
@@ -14,4 +11,24 @@
   @media (min-width: $desktop-width) {
     padding: 0 $page-indent-desktop;
   }
+}
+
+.page__section {
+  text-align: center;
+}
+
+.page__section-name {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  color: $button-color;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.page__section-title {
+  font-size: 24px;
+  line-height: 36px;
+  margin: 0;
+  margin-bottom: 36px;
 }
