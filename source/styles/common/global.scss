@@ -9,14 +9,12 @@ body {
 }
 
 body {
-  position: relative;
-  min-height: 100%;
-  font-family: "Montserrat", "Inter", sans-serif;
-  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
   font-weight: 400;
   font-style: normal;
-  color: #333333;
-  background-color: #ffffff;
+  line-height: 20px;
+  min-height: 100%;
 }
 
 .visually-hidden {

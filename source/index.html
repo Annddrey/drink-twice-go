@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <title>Drink two go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="preload" href="#" type="font/woff2" as="font" />
     <link rel="stylesheet" href="styles/styles.css" />
-    <script src="scripts/index.js" defer></script>
   </head>
-  <body class="page__body">
-    <header class="header wrapper">
+  <body class="page">
+    <header class="page__header header wrapper">
       <a class="header__logo-link" href="/">
         <picture>
           <source
@@ -33,7 +32,9 @@
           />
         </picture>
         <p class="header__logo-description">
-          Интернет-магазин кофейных напитков
+          Интернет-магазин
+          <br />
+          кофейных напитков
         </p>
       </a>
 
@@ -82,17 +83,17 @@
       </nav>
     </header>
 
-    <main class="main-page">
+    <main class="page__main">
       <h1 class="visually-hidden">Интернет-магазин кофейных напитков</h1>
 
-      <section class="main-page__section promo">
+      <section class="page__section promo">
         <h2 class="visually-hidden">Новинки</h2>
 
-        <div class="promo__slider product-swiper swiper">
+        <div class="product-swiper swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <article class="product-swiper__slide">
-                <header class="product-swiper__slide-header">
+                <div class="product-swiper__slide-header">
                   <span class="product-swiper__icon-new-product">Новинка!</span>
                   <a href="./product-card">
                     <h3 class="product-swiper__title">Декаф Флэт Уайт</h3>
@@ -102,7 +103,21 @@
                     фермерским молоком — то, что нужно для расслабления после
                     тяжёлого рабочего дня
                   </p>
-                </header>
+
+                  <div class="product-swiper__buy-wrapper">
+                    <p class="product-swiper__price-wrapper">
+                      <del class="product-swiper__old-price">295₽</del>
+                      <span class="product-swiper__price">225₽</span>
+                    </p>
+
+                    <a
+                      class="product-swiper__buy-button button"
+                      href="./product-card"
+                    >
+                      Заказать
+                    </a>
+                  </div>
+                </div>
                 <a class="product-swiper__link" href="./product-card">
                   <picture>
                     <source
@@ -114,31 +129,21 @@
                     />
                     <img
                       class="product-swiper__image"
+                      height="280"
                       src="./images/flat_white_img@1x.png"
                       srcset="./images/flat_white_img@2x.png 2x"
                       alt="Бежевая баночка кофе с всплеском молока на заднем фоне."
                     />
                   </picture>
                 </a>
-
-                <p class="product-swiper__buy-wrapper">
-                  <span class="product-swiper__old-price">295₽</span>
-                  <span class="product-swiper__price">225₽</span>
-                  <a
-                    class="product-swiper__button button"
-                    href="./product-card"
-                  >
-                    Заказать
-                  </a>
-                </p>
               </article>
             </div>
 
             <div class="swiper-slide">
               <article class="product-swiper__slide">
-                <header class="product-swiper__slide-header">
+                <div class="product-swiper__slide-header">
                   <span class="product-swiper__icon-new-product">Новинка!</span>
-                  <a class="product-swiper__link" href="./product-card">
+                  <a href="./product-card">
                     <h3 class="product-swiper__title">Лавандовый Латте</h3>
                   </a>
 
@@ -147,7 +152,19 @@
                     молоком ламы и лавандовым сиропом унесёт вас прямо на
                     вершину Радужных гор
                   </p>
-                </header>
+                  <div class="product-swiper__buy-wrapper">
+                    <p class="product-swiper__price-wrapper">
+                      <del class="product-swiper__old-price">285₽</del>
+                      <span class="product-swiper__price">265₽</span>
+                    </p>
+                    <a
+                      class="product-swiper__buy-button button"
+                      href="./product-card"
+                    >
+                      Заказать
+                    </a>
+                  </div>
+                </div>
                 <a class="product-swiper__link" href="./product-card">
                   <picture>
                     <source
@@ -158,6 +175,8 @@
                       "
                     />
                     <img
+                      width="280"
+                      height="280"
                       class="product-swiper__image"
                       src="./images/lavender_img@1x.png"
                       srcset="./images/lavender_img@2x.png 2x"
@@ -165,25 +184,14 @@
                     />
                   </picture>
                 </a>
-
-                <p class="product-swiper__buy-wrapper">
-                  <span class="product-swiper__old-price">285₽</span>
-                  <span class="product-swiper__price">265₽</span>
-                  <a
-                    class="product-swiper__button button"
-                    href="./product-card"
-                  >
-                    Заказать
-                  </a>
-                </p>
               </article>
             </div>
 
             <div class="swiper-slide">
               <article class="product-swiper__slide">
-                <header class="product-swiper__slide-header">
+                <div class="product-swiper__slide-header">
                   <span class="product-swiper__icon-new-product">Новинка!</span>
-                  <a class="product-swiper__link" href="./product-card">
+                  <a href="./product-card">
                     <h3 class="product-swiper__title">Тройной Эспрессо</h3>
                   </a>
 
@@ -192,7 +200,20 @@
                     тройной эспрессо из Колумбии покажет вам, что такое
                     настоящая бодрость
                   </p>
-                </header>
+
+                  <div class="product-swiper__buy-wrapper">
+                    <p class="product-swiper__price-wrapper">
+                      <del class="product-swiper__old-price">395₽</del>
+                      <span class="product-swiper__price">375₽</span>
+                    </p>
+                    <a
+                      class="product-swiper__buy-button button"
+                      href="./product-card"
+                    >
+                      Заказать
+                    </a>
+                  </div>
+                </div>
                 <a class="product-swiper__link" href="./product-card">
                   <picture>
                     <source
@@ -203,6 +224,8 @@
                       "
                     />
                     <img
+                      width="280"
+                      height="280"
                       class="product-swiper__image"
                       src="./images/espresso_img@1x.png"
                       srcset="./images/espresso_img@2x.png 2x"
@@ -210,25 +233,19 @@
                     />
                   </picture>
                 </a>
-
-                <p class="product-swiper__buy-wrapper">
-                  <span class="product-swiper__old-price">395₽</span>
-                  <span class="product-swiper__price">375₽</span>
-                  <a
-                    class="product-swiper__button button"
-                    href="./product-card"
-                  >
-                    Заказать
-                  </a>
-                </p>
               </article>
             </div>
-          </div>
 
-          <button class="arrow-button arrow-button">Следующий слайд</button>
-          <button class="arrow-button arrow-button--right">
-            Предыдущий слайд
-          </button>
+            <div class="swiper-pagination"></div>
+          </div>
+          <button
+            class="product-swiper__button product-swiper__button--prev"
+            type="button"
+          ></button>
+          <button
+            class="product-swiper__button product-swiper__button--next"
+            type="button"
+          ></button>
         </div>
       </section>
 
@@ -709,7 +726,7 @@
         ></div>
       </article>
     </main>
-    <footer class="footer">
+    <footer class="page__footer footer">
       <section class="footer__section">
         <h1 class="visually-hidden">Социальные сети</h1>
         <a class="footer__logo-link" href="/">
@@ -811,5 +828,6 @@
         </a>
       </section>
     </footer>
+    <script type="module" src="scripts/index.js" defer></script>
   </body>
 </html>

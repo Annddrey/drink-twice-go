@@ -43,62 +43,6 @@
   background: center url("../../images/toggler-cross.svg") no-repeat;
 }
 
-.nav__user-nav-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  flex-grow: 2;
-  padding-left: 20px;
-}
-
-.nav__user-nav-item {
-  display: flex;
-  color: $base-font-color;
-  justify-content: center;
-  align-items: center;
-  min-width: 60px;
-  height: 60px;
-  box-sizing: border-box;
-  list-style-type: none;
-}
-
-.nav__user-nav-item a {
-  text-decoration: none;
-  color: $base-font-color;
-  padding: 22px;
-
-  &:hover {
-    color: $button-color;
-  }
-
-  &:active {
-    background-color: $button-secondary-color;
-  }
-
-  @media (min-width: $tablet-width) {
-    padding: 22px;
-  }
-}
-
-.nav__user-nav-text {
-  margin-left: 8px;
-
-  @media (max-width: $desktop-width) {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-}
-
 .nav--nojs .nav__site-nav-list {
   position: static;
 }
@@ -114,6 +58,7 @@
     left: 0;
     right: 0;
     background-color: #ffffff;
+    z-index: 5;
   }
 
   @media (max-width: $only-mobile-width) {
@@ -175,5 +120,61 @@
 
   @media (min-width: $tablet-width) {
     padding: 32px 20px;
+  }
+}
+
+.nav__user-nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  flex-grow: 2;
+  padding-left: 20px;
+}
+
+.nav__user-nav-item {
+  display: flex;
+  color: $base-font-color;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+.nav__user-nav-item a {
+  text-decoration: none;
+  color: $base-font-color;
+  padding: 22px;
+
+  &:hover {
+    color: $button-color;
+  }
+
+  &:active {
+    background-color: $button-secondary-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 22px;
+  }
+}
+
+.nav__user-nav-text {
+  margin-left: 8px;
+
+  @media (max-width: 1439px) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
   }
 }

@@ -1,0 +1,17 @@
+.page {
+  color: $base-font-color;
+  background-color: #ffffff;
+}
+
+.page__main {
+}
+
+.page__section,
+.page__header,
+.page__footer {
+  padding: 0 $page-indent-mobail;
+
+  @media (min-width: $desktop-width) {
+    padding: 0 $page-indent-desktop;
+  }
+}
