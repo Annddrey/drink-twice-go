@@ -15,7 +15,7 @@ if (nav) {
 const swiper = new Swiper('.product-swiper', {
   slidesPerView: 1,
   loop: true,
-  spaceBetween: 40,
+  spaceBetween: 50,
   navigation: {
     prevEl: '.product-swiper__button--prev',
     nextEl: '.product-swiper__button--next',
