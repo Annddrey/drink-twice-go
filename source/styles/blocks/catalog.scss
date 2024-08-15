@@ -1,11 +1,118 @@
 .catalog {
+  display: flex;
+  flex-direction: column;
   padding-top: 50px;
   padding-bottom: 44px;
   background-color: $background-grey;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 80px;
+    padding-bottom: 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
 }
 
-.catalog__filter-section {
+.catalog__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 318px 1fr;
+    column-gap: 30px;
+  }
 }
 
-.catalog__product-section {
+.catalog__filter-form {
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.catalog__pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 70px;
+    margin-left: auto;
+  }
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 3;
+  }
+}
+
+.catalog__pagination-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 8px;
+  box-sizing: border-box;
+  color: $button-color;
+  background-color: #ffffff;
+  text-decoration: none;
+
+  & > span {
+    display: none;
+  }
+
+  &:hover {
+    color: $light-font-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    & > span {
+      display: inline;
+    }
+
+    & > svg {
+      display: none;
+    }
+  }
+}
+
+.catalog__pagination-button--next,
+.catalog__pagination-button--prev {
+  @media (min-width: $tablet-width) {
+    padding: 8px 20px;
+  }
+}
+
+.catalog__pagination-button--next {
+  transform: rotate(180deg);
+
+  @media (min-width: $tablet-width) {
+    transform: rotate(0);
+  }
+}
+
+.catalog__pagination-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+  padding: 0;
+}
+
+.catalog__paginatin-item {
+  list-style-type: none;
+
+  &:not(:first-child) {
+    margin-left: 20px;
+  }
+}
+
+.catalog__paginatin-item--current {
+  & > a {
+    font-weight: 600;
+    color: $base-font-color;
+    background-color: #00000000;
+  }
 }
