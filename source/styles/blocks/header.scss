@@ -13,6 +13,10 @@
   line-height: 16px;
   text-decoration: none;
   color: inherit;
+
+  @media (min-width: $tablet-width) {
+    flex: 2 0 auto;
+  }
 }
 
 .header__logo {
@@ -31,6 +35,7 @@
 .header__logo-description {
   display: none;
   margin-left: 20px;
+  margin-right: auto;
 
   @media (min-width: $desktop-width) {
     display: inline;
@@ -38,5 +43,7 @@
 }
 
 .header__nav {
-  padding-left: 20px;
+  @media (min-width: $tablet-width) {
+    flex: 2 0 auto;
+  }
 }

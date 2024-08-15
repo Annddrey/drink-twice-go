@@ -29,7 +29,7 @@
   width: inherit;
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 600 auto;
+    grid-template-columns: 1fr 1fr;
     column-gap: 30px;
     padding-left: 25px;
     box-sizing: border-box;
@@ -114,6 +114,7 @@
 
 .product-swiper__description {
   margin: 0;
+  max-width: 820px;
 
   @media (min-width: $tablet-width) {
     font-size: 20;
