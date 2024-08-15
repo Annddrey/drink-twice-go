@@ -5,6 +5,7 @@
     <title>Drink two go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="preload" href="#" type="font/woff2" as="font" />
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
     <link rel="stylesheet" href="vendor/nouislider/nouislider.css" />
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
@@ -776,8 +777,8 @@
         <h1 class="visually-hidden">Где мы находимся</h1>
 
         <div
-          class="map__canvas"
-          id="map-canvas"
+          class="address-map__wrapper"
+          id="map-wrapper"
           aria-label="Санкт-Петербург, набережная реки Карповки, дом 5"
         ></div>
       </article>
@@ -895,7 +896,8 @@
         </a>
       </section>
     </footer>
-    <script src="vendor/nouislider/nouislider.js"></script>
     <script type="module" src="scripts/index.js" defer></script>
+    <script src="vendor/leaflet/leaflet.js"></script>
+    <script src="vendor/nouislider/nouislider.js"></script>
   </body>
 </html>

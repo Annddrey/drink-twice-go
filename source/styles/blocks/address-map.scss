@@ -1,0 +1,10 @@
+.address-map__wrapper {
+  height: 420px;
+
+  @media (min-width: $tablet-width) {
+    height: 480px;
+  }
+  @media (min-width: $desktop-width) {
+    height: 540px;
+  }
+}
