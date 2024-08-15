@@ -115,6 +115,7 @@
     left: 2px;
     border-radius: 50%;
     background-color: $button-color;
+    animation: meudaich 0.2s ease-in-out;
   }
 }
 
@@ -137,6 +138,7 @@
     content: "";
     top: 2px;
     left: 2px;
+    right: auto;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -150,6 +152,7 @@
   &::before {
     left: auto;
     right: 2px;
+    animation: on 0.2s ease-in-out;
   }
 }
 
