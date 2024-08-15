@@ -186,3 +186,10 @@
   right: 0;
   transform: rotate(180deg);
 }
+
+.product-filter__button-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 30px;
+}

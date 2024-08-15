@@ -1,0 +1,133 @@
+.product-filter {
+  margin-bottom: 20px;
+}
+
+.product-filter__item {
+  text-align: start;
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.product-filter__filter-heading {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.product-filter__filter-heading--price {
+  margin-bottom: 30px;
+}
+
+.product-filter__slider {
+  margin-bottom: 34px;
+}
+
+.product-filter__fields-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.product-filter__fields-separator {
+  width: 8px;
+  height: 2px;
+  background-color: $base-grey;
+  margin: 0 5px;
+}
+.product-filter__input-ranger {
+  display: block;
+  border: 2px solid $button-color;
+  border-radius: 4px;
+  padding: 8px 10px;
+  min-width: 118px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.product-filter__input-label {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  padding-left: 34px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.product-filter__input-label--radio {
+  padding-left: 34px;
+}
+
+.product-filter__input-label--checkbox {
+  padding-left: 52px;
+}
+
+.product-filter__radio-mark {
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  border: 2px solid $button-color;
+  box-sizing: border-box;
+}
+
+.product-filter__hidden-input:checked ~ .product-filter__radio-mark {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    background-color: $button-color;
+  }
+}
+
+.product-filter__hidden-input:disabled ~ .product-filter__radio-mark,
+.product-filter__hidden-input:disabled ~ .product-filter__checkbox-mark {
+  opacity: 0.3;
+}
+
+.product-filter__checkbox-mark {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: $base-grey;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
+}
+
+.product-filter__hidden-input:checked ~ .product-filter__checkbox-mark {
+  background-color: $button-color;
+
+  &::before {
+    left: auto;
+    right: 2px;
+  }
+}

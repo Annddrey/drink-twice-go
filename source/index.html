@@ -5,6 +5,7 @@
     <title>Drink two go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="preload" href="#" type="font/woff2" as="font" />
+    <link rel="stylesheet" href="vendor/nouislider/nouislider.css" />
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body class="page">
@@ -301,36 +302,32 @@
             method="post"
           >
             <fieldset class="product-filter__item">
-              <legend class="product-filter__filter-heading">Цена</legend>
+              <legend
+                class="product-filter__filter-heading product-filter__filter-heading--price"
+              >
+                Цена
+              </legend>
 
-              <div class="product-filter__ranger ranger">
-                <div class="ranger__fit">
-                  <button class="ranger__slider ranger__slider--min-price">
-                    <span class="visually-hidden">
-                      Ползунок минимальной цены
-                    </span>
-                  </button>
-                  <button class="ranger__slider ranger__slider--min-price">
-                    <span class="visually-hidden">
-                      Ползунок максимальнойы цены
-                    </span>
-                  </button>
-                </div>
-              </div>
+              <div class="product-filter__slider"></div>
 
-              <input
-                class="product-filter__input-ranger min-ranger"
-                value="0"
-                name="min-price"
-                type="number"
-                placeholder="0"
-              />
-              <input
-                class="product-filter__input-ranger max-ranger"
-                value="123"
-                name="max-price"
-                type="number"
-              />
+              <p class="product-filter__fields-wrapper">
+                <input
+                  class="product-filter__input-ranger min-ranger"
+                  value="0"
+                  name="min-price"
+                  type="text"
+                  placeholder="0"
+                  size="5"
+                />
+                <span class="product-filter__fields-separator"></span>
+                <input
+                  class="product-filter__input-ranger max-ranger"
+                  value="123"
+                  name="max-price"
+                  type="text"
+                  size="5"
+                />
+              </p>
             </fieldset>
 
             <fieldset class="product-filter__item">
@@ -338,46 +335,58 @@
                 Наличие молока
               </legend>
 
-              <label class="product-filter__input-label">
+              <label
+                class="product-filter__input-label product-filter__input-label--radio"
+              >
                 Неважно
                 <input
-                  class="product-filter__radio-button"
+                  class="visually-hidden product-filter__hidden-input"
                   type="radio"
                   name="with-milk"
                   value="not-matter"
                   checked
                 />
+                <span class="product-filter__radio-mark"></span>
               </label>
 
-              <label class="product-filter__input-label">
+              <label
+                class="product-filter__input-label product-filter__input-label--radio"
+              >
                 Только животное
                 <input
-                  class="product-filter__radio-button"
+                  class="visually-hidden product-filter__hidden-input"
                   type="radio"
                   name="with-milk"
                   value="animal-milk"
                 />
+                <span class="product-filter__radio-mark"></span>
               </label>
 
-              <label class="product-filter__input-label">
+              <label
+                class="product-filter__input-label product-filter__input-label--radio"
+              >
                 Только растительное
                 <input
-                  class="product-filter__radio-button"
+                  class="visually-hidden product-filter__hidden-input"
                   type="radio"
                   name="with-milk"
                   value="only-vegetable"
                 />
+                <span class="product-filter__radio-mark"></span>
               </label>
 
-              <label class="product-filter__input-label">
+              <label
+                class="product-filter__input-label product-filter__input-label--radio"
+              >
                 Без молока
                 <input
-                  class="product-filter__radio-button"
+                  class="visually-hidden product-filter__hidden-input"
                   type="radio"
                   name="with-milk"
                   value="without-milk"
                   disabled
                 />
+                <span class="product-filter__radio-mark"></span>
               </label>
             </fieldset>
 
@@ -386,68 +395,85 @@
                 Страна произрастания
               </legend>
 
-              <label class="product-filter__input-label">
+              <label
+                class="product-filter__input-label product-filter__input-label--checkbox"
+              >
                 Бразилия
                 <input
-                  class="product-filter__radio-button"
+                  class="visually-hidden product-filter__hidden-input"
                   type="checkbox"
                   name="region"
                   value="brazil"
                   checked
                 />
+                <span class="product-filter__checkbox-mark"></span>
               </label>
 
-              <label class="product-filter__input-label">
+              <label
+                class="product-filter__input-label product-filter__input-label--checkbox"
+              >
                 Эфиопия
                 <input
-                  class="product-filter__radio-button"
+                  class="visually-hidden product-filter__hidden-input"
                   type="checkbox"
                   name="region"
                   value="ethiopia"
                 />
+                <span class="product-filter__checkbox-mark"></span>
               </label>
 
-              <label class="product-filter__input-label">
+              <label
+                class="product-filter__input-label product-filter__input-label--checkbox"
+              >
                 Колумбия
                 <input
-                  class="product-filter__radio-button"
+                  class="visually-hidden product-filter__hidden-input"
                   type="checkbox"
                   name="region"
                   value="colombia"
                 />
+                <span class="product-filter__checkbox-mark"></span>
               </label>
 
-              <label class="product-filter__input-label">
+              <label
+                class="product-filter__input-label product-filter__input-label--checkbox"
+              >
                 Коста-Рика
                 <input
-                  class="product-filter__radio-button"
+                  class="visually-hidden product-filter__hidden-input"
                   type="checkbox"
                   name="region"
                   value="costa-rica"
                 />
+                <span class="product-filter__checkbox-mark"></span>
               </label>
 
-              <label class="product-filter__input-label">
+              <label
+                class="product-filter__input-label product-filter__input-label--checkbox"
+              >
                 Перу
                 <input
-                  class="product-filter__radio-button"
+                  class="visually-hidden product-filter__hidden-input"
                   type="checkbox"
                   name="region"
                   value="peru"
                   disabled
                 />
+                <span class="product-filter__checkbox-mark"></span>
               </label>
             </fieldset>
 
-            <button class="button product-filter__button" type="submit">
-              Применить
-            </button>
-            <button
-              class="button product-filter__button product-filter__button--reset"
-              type="reset"
-            >
-              Сбросить
-            </button>
+            <div class="product-filter__button-wrapper">
+              <button class="button product-filter__button" type="submit">
+                Применить
+              </button>
+              <button
+                class="button product-filter__button product-filter__button--reset"
+                type="reset"
+              >
+                Сбросить
+              </button>
+            </div>
           </form>
         </section>
 
@@ -826,6 +852,7 @@
         </a>
       </section>
     </footer>
+    <script src="vendor/nouislider/nouislider.js"></script>
     <script type="module" src="scripts/index.js" defer></script>
   </body>
 </html>
