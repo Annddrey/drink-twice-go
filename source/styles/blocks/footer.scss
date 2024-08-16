@@ -182,6 +182,7 @@
 }
 
 .footer__link {
+  transition: color 0.2s ease-in-out;
   &:hover {
     color: $button-hover-color;
   }

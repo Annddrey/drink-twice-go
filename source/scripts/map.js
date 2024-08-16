@@ -9,7 +9,7 @@ const marker = L.icon({
 });
 
 L.marker([59.968322, 30.317359], {
-  draggable: true,
+  draggable: false,
   icon: marker,
 }).addTo(map);
 

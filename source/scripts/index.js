@@ -1,4 +1,4 @@
-import './formSlider.js';
+import './form.js';
 import './swiper.js';
 import './map.js';
 

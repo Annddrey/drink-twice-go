@@ -299,6 +299,7 @@
 
             <form
               class="catalog__filter-form product-filter"
+              id="product-filter"
               action="https://echo.htmlacademy.ru/"
               method="post"
             >
@@ -314,19 +315,21 @@
 
                   <p class="product-filter__fields-wrapper">
                     <input
-                      class="product-filter__input-ranger min-ranger"
+                      class="product-filter__input-ranger"
+                      id="min-price-input"
+                      name="min-price-input"
                       value="0"
-                      name="min-price"
-                      type="text"
+                      type="number"
                       placeholder="0"
                       size="5"
                     />
                     <span class="product-filter__fields-separator"></span>
                     <input
                       class="product-filter__input-ranger max-ranger"
-                      value="123"
-                      name="max-price"
-                      type="text"
+                      id="max-price-input"
+                      name="max-price-input"
+                      value="900"
+                      type="number"
                       size="5"
                     />
                   </p>
