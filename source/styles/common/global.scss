@@ -1,5 +1,6 @@
 html {
   height: 100%;
+  overflow-y: scroll;
 }
 
 html,
@@ -9,6 +10,7 @@ body {
 }
 
 body {
+  overflow: hidden;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: 400;
