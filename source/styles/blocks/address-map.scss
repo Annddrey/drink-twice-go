@@ -1,0 +1,18 @@
+.address-map__wrapper {
+  height: 420px;
+
+  background: center url("../../images/map@1x.jpg") no-repeat;
+  background-size: cover;
+
+  @media (resolution: 2x) {
+    background: center url("../../images/map@2x.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 480px;
+  }
+  @media (min-width: $desktop-width) {
+    height: 540px;
+  }
+}
