@@ -31,3 +31,47 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+@keyframes increase {
+  0% {
+    transform: scale(0.4);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes on {
+  0% {
+    left: 2px;
+    right: auto;
+  }
+
+  50% {
+    left: 20px;
+  }
+
+  100% {
+    right: 2px;
+    left: auto;
+  }
+}
+@keyframes off {
+  0% {
+    right: 2px;
+    left: auto;
+  }
+
+  50% {
+    right: 20px;
+  }
+
+  100% {
+    right: 40px;
+  }
+}

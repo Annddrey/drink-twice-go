@@ -37,12 +37,20 @@
 }
 
 .product-filter__slider {
+  width: 280px;
   margin-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+  }
+  @media (min-width: $tablet-width) {
+    width: 318px;
+  }
 }
 
 .product-filter__fields-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   margin: 0;
   margin-bottom: 4px;
@@ -52,24 +60,29 @@
 .product-filter__fields-separator {
   width: 8px;
   height: 2px;
+  margin: 0 18px;
   background-color: $base-grey;
-  margin: 0 5px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 20px;
+  }
 }
+
 .product-filter__input-ranger {
   display: block;
   border: 2px solid $button-color;
   border-radius: 4px;
   padding: 8px 10px;
-  min-width: 118px;
   margin: 0;
   box-sizing: border-box;
-  width: auto;
+  width: 118px;
 
   @media (min-width: $tablet-width) {
-    min-width: 87px;
+    width: 87px;
   }
+
   @media (min-width: $desktop-width) {
-    min-width: 134px;
+    width: 134px;
   }
 }
 
@@ -109,13 +122,10 @@
   &::before {
     position: absolute;
     content: "";
-    width: 16px;
-    height: 16px;
-    top: 2px;
-    left: 2px;
+    inset: 2px;
     border-radius: 50%;
     background-color: $button-color;
-    animation: meudaich 0.2s ease-in-out;
+    animation: increase 0.2s ease-in-out;
   }
 }
 
@@ -133,6 +143,8 @@
   height: 24px;
   border-radius: 12px;
   background-color: $base-grey;
+  transition: background-color 0.4s ease-in-out;
+
   &::before {
     position: absolute;
     content: "";
@@ -143,6 +155,7 @@
     height: 20px;
     border-radius: 50%;
     background-color: #ffffff;
+    animation: off 0.3s ease-in-out;
   }
 }
 
@@ -150,9 +163,9 @@
   background-color: $button-color;
 
   &::before {
-    left: auto;
     right: 2px;
-    animation: on 0.2s ease-in-out;
+    left: auto;
+    animation: on 0.3s ease-in-out;
   }
 }
 
