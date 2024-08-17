@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <title>Drink two go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="preload" href="#" type="font/woff2" as="font" />
+    <link
+      rel="preload"
+      href="fonts/montserrat_normal_100-900_cyr.woff2"
+      type="font/woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
     <link rel="stylesheet" href="vendor/nouislider/nouislider.css" />
     <link rel="stylesheet" href="styles/styles.css" />
@@ -322,7 +328,7 @@
                       value="0"
                       type="number"
                       placeholder="0"
-                      size="5"
+                      aria-label="минимальная цена"
                     />
                     <span class="product-filter__fields-separator"></span>
                     <input
@@ -331,7 +337,7 @@
                       name="max-price-input"
                       value="900"
                       type="number"
-                      size="5"
+                      aria-label="максимальная цена"
                     />
                   </p>
                 </fieldset>
@@ -487,7 +493,7 @@
           <section class="products">
             <h3 class="visually-hidden">Список продуктов</h3>
 
-            <p class="products__sort-wrapper">
+            <label class="products__sort-wrapper">
               Сортировка:
               <select
                 class="products__sort"
@@ -498,7 +504,7 @@
                 <option value="price-increases">по возрастанию цены</option>
                 <option value="descending-prices">по убыванию цены</option>
               </select>
-            </p>
+            </label>
 
             <ul class="products__list">
               <li class="products__item">
@@ -525,6 +531,7 @@
                         src="./images/coffee-can-1@1x.png"
                         srcset="./images/coffee-can-1@2x.png 2x"
                         alt="декаф флэт уайт."
+                        loading="lazy"
                       />
                     </picture>
                   </a>
@@ -564,6 +571,7 @@
                         src="./images/coffee-can-2@1x.png"
                         srcset="./images/coffee-can-2@2x.png 2x"
                         alt="декаф флэт уайт."
+                        loading="lazy"
                       />
                     </picture>
                   </a>
@@ -603,6 +611,7 @@
                         src="./images/coffee-can-3@1x.png"
                         srcset="./images/coffee-can-3@2x.png 2x"
                         alt="декаф флэт уайт."
+                        loading="lazy"
                       />
                     </picture>
                   </a>
@@ -642,6 +651,7 @@
                         src="./images/coffee-can-4@1x.png"
                         srcset="./images/coffee-can-4@2x.png 2x"
                         alt="декаф флэт уайт."
+                        loading="lazy"
                       />
                     </picture>
                   </a>
@@ -681,6 +691,7 @@
                         src="./images/coffee-can-5@1x.png"
                         srcset="./images/coffee-can-5@2x.png 2x"
                         alt="декаф флэт уайт."
+                        loading="lazy"
                       />
                     </picture>
                   </a>
@@ -720,6 +731,7 @@
                         src="./images/coffee-can-6@1x.png"
                         srcset="./images/coffee-can-6@2x.png 2x"
                         alt="декаф флэт уайт."
+                        loading="lazy"
                       />
                     </picture>
                   </a>
@@ -743,7 +755,7 @@
               type="button"
               aria-label="Вперед"
             >
-              <svg width="6" heigth="10" aria-hidden="true" focusable="false">
+              <svg width="6" aria-hidden="true" focusable="false">
                 <use xlink:href="icons/stack.svg#arrow-icon"></use>
               </svg>
               <span aria-hidden="true">Назад</span>
@@ -768,7 +780,7 @@
               type="button"
               aria-label="Назад"
             >
-              <svg width="6" heigth="10" aria-hidden="true" focusable="false">
+              <svg width="6" aria-hidden="true" focusable="false">
                 <use xlink:href="icons/stack.svg#arrow-icon"></use>
               </svg>
               <span aria-hidden="true">Вперед</span>
@@ -900,7 +912,7 @@
         </a>
       </section>
     </footer>
-    <script type="module" src="scripts/index.js" defer></script>
+    <script type="module" src="scripts/index.js"></script>
     <script src="vendor/leaflet/leaflet.js"></script>
     <script src="vendor/nouislider/nouislider.js"></script>
   </body>
