@@ -18,12 +18,17 @@
 }
 
 .page__section-name {
+  display: inline-block;
   font-size: 12px;
   font-weight: 700;
   line-height: 16px;
   color: $button-color;
+  letter-spacing: 0.48px;
   text-transform: uppercase;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+  }
 }
 
 .page__section-title {
@@ -35,6 +40,18 @@
   @media (min-width: $tablet-width) {
     font-size: 42px;
     line-height: 64px;
-    margin-bottom: 60px;
+    margin-bottom: 66px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
+  }
+}
+
+.page__section-title--catalog {
+  margin-bottom: 20px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
   }
 }

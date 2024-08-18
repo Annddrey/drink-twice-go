@@ -2,9 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 579px;
 
   @media (max-width: $only-mobile-width) {
     padding-right: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: none;
   }
 }
 
@@ -152,6 +157,10 @@
   @media (min-width: $tablet-width) {
     flex: 0 1 auto;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+  }
 }
 
 .nav__user-nav-item {
@@ -162,7 +171,14 @@
   min-width: 60px;
   height: 60px;
   box-sizing: border-box;
+  font-family: inherit;
   list-style-type: none;
+
+  @media (min-width: $desktop-width) {
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
+  }
 }
 
 .nav__user-nav-item a {

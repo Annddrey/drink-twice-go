@@ -1,14 +1,14 @@
 .advantages {
-  padding-top: 50px;
+  padding-top: 46px;
   padding-bottom: 60px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 60px;
+    padding-top: 57px;
     padding-bottom: 100px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 100px;
+    padding-top: 96px;
     padding-bottom: 120px;
   }
 }
@@ -20,7 +20,7 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
-    gap: 50px 30px;
+    gap: 56px 30px;
   }
 
   @media (min-width: $desktop-width) {
@@ -41,6 +41,10 @@
     padding-top: 0;
     padding-left: 70px;
 
+    &:nth-child(odd) {
+      padding-left: 82px;
+    }
+
     &:not(:last-child) {
       margin-bottom: 0;
     }
@@ -48,8 +52,11 @@
 
   @media (min-width: $desktop-width) {
     text-align: center;
-    padding-top: 76px;
-    padding-left: 0;
+    padding-top: 83px;
+
+    &:nth-child(1n) {
+      padding-left: 0;
+    }
   }
 }
 
@@ -63,18 +70,39 @@
 }
 
 .advantages__item--time::before {
-  width: 50px;
-  left: calc(50% - 26px);
   background: center url("../../images/whatch-list-icon.svg") no-repeat;
 }
-.advantages__item--energy::before {
+
+.advantages__item--ease::before {
   background: center url("../../images/pocket-list-icon.svg") no-repeat;
 }
-.advantages__item--ease::before {
+
+.advantages__item--energy::before {
   background: center url("../../images/lightning-list-icon.svg") no-repeat;
 }
+
 .advantages__item--eco::before {
   background: center url("../../images/leaf-list-icon.svg") no-repeat;
+}
+
+.advantages__item--ease::before,
+.advantages__item--energy::before {
+  @media (min-width: $tablet-width) {
+    top: -7px;
+  }
+  @media (min-width: $desktop-width) {
+    top: 0;
+  }
+}
+
+.advantages__item:nth-child(odd)::before {
+  @media (min-width: $tablet-width) {
+    left: 11px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: calc(50% - 26px);
+  }
 }
 
 .advantages__item::before {
@@ -96,7 +124,7 @@
   @media (min-width: $tablet-width) {
     font-size: 24px;
     line-height: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 }
 

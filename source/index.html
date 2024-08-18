@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Drink two go</title>
@@ -251,10 +251,12 @@
           <button
             class="product-swiper__button product-swiper__button--prev"
             type="button"
+            aria-label="предыдущий слайд"
           ></button>
           <button
             class="product-swiper__button product-swiper__button--next"
             type="button"
+            aria-label="следующий слайд"
           ></button>
         </div>
       </section>
@@ -271,7 +273,7 @@
             </dd>
           </div>
 
-          <div class="advantages__item advantages__item--energy">
+          <div class="advantages__item advantages__item--ease">
             <dt class="advantages__heading">Удобство</dt>
             <dd class="advantages__description">
               Легко помещается и в карман,<br />
@@ -279,7 +281,7 @@
             </dd>
           </div>
 
-          <div class="advantages__item advantages__item--ease">
+          <div class="advantages__item advantages__item--energy">
             <dt class="advantages__heading">Бодрость</dt>
             <dd class="advantages__description">
               Сбалансированная доза кофеина даст мощный заряд энергии
@@ -298,7 +300,9 @@
 
       <section class="page__section catalog">
         <span class="page__section-name">Каталог</span>
-        <h2 class="page__section-title">Каталог кофейных напитков</h2>
+        <h2 class="page__section-title page__section-title--catalog">
+          Каталог кофейных напитков
+        </h2>
 
         <div class="catalog__wrapper">
           <section class="catalog__filter-section">
@@ -325,7 +329,6 @@
                       class="product-filter__input-ranger"
                       id="min-price-input"
                       name="min-price-input"
-                      value="0"
                       type="number"
                       placeholder="0"
                       aria-label="минимальная цена"
@@ -337,6 +340,7 @@
                       name="max-price-input"
                       value="900"
                       type="number"
+                      placeholder="900"
                       aria-label="максимальная цена"
                     />
                   </p>
@@ -887,7 +891,7 @@
       </section>
 
       <section class="footer__section">
-        <h1 class="footer__title">Контакты</h1>
+        <h1 class="footer__title footer__title--address">Контакты</h1>
 
         <p class="footer__address footer__address--address">
           Санкт-Петербург, набережная реки Карповки, дом 5
@@ -906,7 +910,7 @@
           href="https://htmlacademy.ru/intensive/adaptive"
         >
           <span>Разработано в HTML Academy</span>
-          <svg width="20" height="20" aria-hidden="true" focusable="false">
+          <svg width="16" height="16" aria-hidden="true" focusable="false">
             <use xlink:href="icons/stack.svg#html-academy-logo"></use>
           </svg>
         </a>

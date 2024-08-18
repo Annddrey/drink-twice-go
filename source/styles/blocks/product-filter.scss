@@ -10,11 +10,12 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
+    gap: 25px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr;
+    gap: 29px;
   }
 }
 
@@ -30,10 +31,11 @@
   font-weight: 600;
   line-height: 24px;
   margin-bottom: 20px;
+  padding: 0;
 }
 
 .product-filter__filter-heading--price {
-  margin-bottom: 30px;
+  margin-bottom: 31px;
 }
 
 .product-filter__slider {
@@ -54,7 +56,6 @@
   justify-content: start;
   align-items: center;
   margin: 0;
-  margin-bottom: 4px;
   align-self: center;
 }
 
@@ -72,11 +73,16 @@
 .product-filter__input-ranger {
   display: block;
   border: 2px solid $button-color;
-  border-radius: 4px;
   padding: 8px 10px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
   margin: 0;
-  box-sizing: border-box;
+  height: 40px;
   width: 118px;
+  border-radius: 4px;
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
     width: 87px;
@@ -85,6 +91,10 @@
   @media (min-width: $desktop-width) {
     width: 134px;
   }
+}
+
+.product-filter__input-ranger::placeholder {
+  color: $base-grey;
 }
 
 .product-filter__input-label {
@@ -100,11 +110,11 @@
 }
 
 .product-filter__input-label--radio {
-  padding-left: 34px;
+  padding-left: 37px;
 }
 
 .product-filter__input-label--checkbox {
-  padding-left: 52px;
+  padding-left: 55px;
 }
 
 .product-filter__radio-mark {
@@ -113,7 +123,7 @@
   width: 24px;
   height: 24px;
   top: 0;
-  left: 0;
+  left: 2px;
   border-radius: 50%;
   border: 2px solid $button-color;
   box-sizing: border-box;
@@ -139,7 +149,7 @@
   display: block;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 3px;
   width: 42px;
   height: 24px;
   border-radius: 12px;
@@ -183,6 +193,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr;
     align-self: auto;
   }
 }
