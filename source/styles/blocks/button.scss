@@ -13,7 +13,7 @@
   box-sizing: border-box;
   border: none;
   cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.3s, color 0.3s;
 
   &:hover {
     background-color: $button-hover-color;
