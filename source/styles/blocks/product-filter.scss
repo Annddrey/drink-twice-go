@@ -125,11 +125,14 @@
   top: 0;
   left: 2px;
   border-radius: 50%;
-  border: 2px solid $button-color;
+  border: 2px solid $base-grey;
   box-sizing: border-box;
+  transition: border-color 0.3s ease-in-out;
 }
 
 .product-filter__hidden-input:checked ~ .product-filter__radio-mark {
+  border-color: $button-color;
+
   &::before {
     position: absolute;
     content: "";
@@ -137,6 +140,20 @@
     border-radius: 50%;
     background-color: $button-color;
     animation: increase 0.2s ease-in-out;
+  }
+}
+
+.product-filter__input-label--radio:hover
+  .product-filter__hidden-input:not(:checked)
+  + .product-filter__radio-mark {
+  border-color: $button-hover-color;
+
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 2px;
+    border-radius: 50%;
+    background-color: $button-secondary-color;
   }
 }
 
@@ -154,6 +171,8 @@
   height: 24px;
   border-radius: 12px;
   background-color: $base-grey;
+  overflow: hidden;
+  box-sizing: border-box;
   transition: background-color 0.4s ease-in-out;
 
   &::before {
@@ -167,6 +186,17 @@
     border-radius: 50%;
     background-color: #ffffff;
     animation: off 0.3s ease-in-out;
+  }
+}
+
+.product-filter__input-label--checkbox:hover .product-filter__checkbox-mark {
+  &::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    border-radius: 12px;
+    border: 2px solid $button-hover-color;
+    z-index: 5;
   }
 }
 
